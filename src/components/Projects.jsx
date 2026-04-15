@@ -30,9 +30,18 @@ const Projects = () => {
       ],
       image: projectImage,
       link: 'https://github.com/BhuvanSShetty',
+      deploymentlink: 'https://axios.bhuvans.in/',
       delay: 'md:mt-32'
     }
   ];
+
+  const getDomain = (url) => {
+    try {
+      return new URL(url).hostname;
+    } catch {
+      return 'Deployment';
+    }
+  };
 
   return (
     <section id="projects" className="py-32 px-6 md:px-12 max-w-[1440px] mx-auto">
@@ -76,12 +85,23 @@ const Projects = () => {
                 ))}
               </ul>
 
-              <a
-                href={project.link}
-                className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
-              >
-                View Project Detail <span className="material-symbols-outlined text-xl">north_east</span>
-              </a>
+              <div className="flex flex-wrap gap-x-8 gap-y-2">
+                <a
+                  href={project.link}
+                  className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                >
+                  View GitHub <span className="material-symbols-outlined text-xl">north_east</span>
+                </a>
+                
+                {project.deploymentlink && (
+                  <a
+                    href={project.deploymentlink}
+                    className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                  >
+                    {getDomain(project.deploymentlink)} <span className="material-symbols-outlined text-xl">north_east</span>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
