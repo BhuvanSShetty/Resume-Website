@@ -1,0 +1,72 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-low": "#1b1b1b",
+        "surface-dim": "#131313",
+        "tertiary-fixed-dim": "#bfc8cc",
+        "primary-fixed-dim": "#bbc9d0",
+        "on-secondary-container": "#a1bdca",
+        "outline": "#8c9195",
+        "outline-variant": "#42484b",
+        "on-tertiary-container": "#e4edf2",
+        "surface-container-lowest": "#0e0e0e",
+        "primary-container": "#5f6c73",
+        "tertiary": "#bfc8cc",
+        "tertiary-fixed": "#dbe4e8",
+        "on-primary-fixed": "#101d23",
+        "on-tertiary-fixed": "#141d20",
+        "error": "#ffb4ab",
+        "tertiary-container": "#636c70",
+        "surface": "#131313",
+        "on-secondary-fixed-variant": "#304a55",
+        "on-surface": "#e5e2e1",
+        "primary": "#bbc9d0",
+        "on-primary-container": "#e0eef5",
+        "on-surface-variant": "#c2c7cb",
+        "secondary-fixed-dim": "#afcbd8",
+        "surface-container": "#20201f",
+        "surface-tint": "#bbc9d0",
+        "on-primary": "#253238",
+        "surface-variant": "#353535",
+        "on-tertiary-fixed-variant": "#3f484c",
+        "on-secondary-fixed": "#021f29",
+        "secondary-container": "#334d58",
+        "surface-bright": "#393939",
+        "secondary": "#afcbd8",
+        "surface-container-high": "#2a2a2a",
+        "on-error": "#690005",
+        "inverse-on-surface": "#313030",
+        "on-error-container": "#ffdad6",
+        "background": "#131313",
+        "secondary-fixed": "#cbe7f5",
+        "inverse-primary": "#536067",
+        "on-tertiary": "#293235",
+        "inverse-surface": "#e5e2e1",
+        "surface-container-highest": "#353535",
+        "primary-fixed": "#d7e5ec",
+        "on-background": "#e5e2e1",
+        "on-secondary": "#19343e",
+        "on-primary-fixed-variant": "#3c494f",
+        "error-container": "#93000a"
+      },
+      borderRadius: {
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      fontFamily: {
+        "headline": ["Plus Jakarta Sans", "sans-serif"],
+        "body": ["Plus Jakarta Sans", "sans-serif"],
+        "label": ["Plus Jakarta Sans", "sans-serif"]
+      }
+    },
+  },
+  plugins: [],
+}
