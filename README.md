@@ -1,11 +1,9 @@
-# Bhuvan S Shetty 
+# Bhuvan S Shetty Resume Website
 
-# Resume website
+##  Live Demo
+[Check out the live site](http://bhuvans.in) 
 
-## 🚀 Live Demo
-[Check out the live site](http://localhost:5174/) (Local Development)
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Core**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
@@ -13,14 +11,14 @@
 - **Typography**: Plus Jakarta Sans
 - **Icons**: Material Symbols Outlined
 
-## ✨ Key Features
+## Key Features
 
 - **Architectural Aesthetic**: Minimalist, high-performance design featuring a global black dotted grid pattern and glassmorphism.
 - **Responsive Layout**: Editorial-style grid systems that adapt seamlessly from mobile to wide-screen displays.
 - **Tech Core Bento Grid**: A visual, interactive map of my technical stack spanning Languages, Tools, Frameworks, and Cloud/DB.
 - **Optimized Performance**: Built using Vite for near-instant HMR and production-ready bundles.
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 ├── public/               # static assets (favicon, etc.)
@@ -39,7 +37,7 @@
 └── index.html            # Documentation and metadata
 ```
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 1. **Clone the repository**
    ```bash
@@ -60,9 +58,6 @@
    ```bash
    npm run build
    ```
-
-## 📄 Resume
-Access my latest resume [here](https://drive.google.com/file/d/17TmpW1obsg4SuontNeZw-M1dbcJZa2cd/view?usp=sharing).
 
 ---
 Created by **Bhuvan S Shetty**.
