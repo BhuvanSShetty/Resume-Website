@@ -1,6 +1,6 @@
-# Bhuvan S Shetty | Architecting the Core
+# Bhuvan S Shetty 
 
-A high-performance, premium personal portfolio built with a focus on structural integrity and backend excellence. This website serves as a technical showcase of my engineering philosophy, academic foundation, and project case studies.
+# Resume website
 
 ## 🚀 Live Demo
 [Check out the live site](http://localhost:5174/) (Local Development)
