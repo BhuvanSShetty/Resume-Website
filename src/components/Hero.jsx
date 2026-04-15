@@ -1,4 +1,5 @@
 import React from 'react';
+import portrait from '../assets/bhuvan_portrait.png';
 
 const Hero = () => {
   return (
@@ -38,7 +39,7 @@ const Hero = () => {
         <div className="relative w-full aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-outline-variant/20 group">
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-40 z-10 transition-opacity group-hover:opacity-10"></div>
           <img
-            src="/src/assets/bhuvan_portrait.png"
+            src={portrait}
             alt="Bhuvan S Shetty Profile"
             className="w-full h-full object-cover transition-all duration-1000 scale-100 group-hover:scale-110 brightness-95 group-hover:brightness-105"
           />

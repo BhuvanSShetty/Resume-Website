@@ -1,4 +1,5 @@
 import React from 'react';
+import csAbstract from '../assets/cs_abstract.png';
 
 const AboutSection = () => {
   return (
@@ -18,7 +19,7 @@ const AboutSection = () => {
           <div className="w-full aspect-square bg-surface-container rounded-lg overflow-hidden relative border border-outline-variant/10 shadow-2xl">
             <img
               className="w-full h-full object-cover transition-all duration-700 brightness-75 hover:brightness-100"
-              src="/src/assets/cs_abstract.png"
+              src={csAbstract}
               alt="Structural Engineering Core"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>

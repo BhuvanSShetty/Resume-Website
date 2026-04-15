@@ -1,4 +1,5 @@
 import React from 'react';
+import projectImage from '../assets/image.png';
 
 const Projects = () => {
   const projects = [
@@ -27,7 +28,7 @@ const Projects = () => {
         'Built a public portal with multi-language support (EN, HI, KN).',
         'Full containerization with Docker and Docker Compose.'
       ],
-      image: '/src/assets/image.png',
+      image: projectImage,
       link: 'https://github.com/BhuvanSShetty',
       delay: 'md:mt-32'
     }
