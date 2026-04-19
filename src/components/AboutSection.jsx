@@ -1,5 +1,6 @@
 import React from 'react';
 import csAbstract from '../assets/cs_abstract.png';
+import aikyamRunnerUp from '../assets/aikyam_runner_up.JPG';
 
 const AboutSection = () => {
   return (
@@ -79,11 +80,9 @@ const AboutSection = () => {
           {[
             { tag: 'ACADEMIC', title: '100/100 in Computer Science (PUC)', icon: 'terminal' },
             { tag: 'ACADEMIC', title: '100/100 in ADA Lab & Web Developement  (RVITM)', icon: 'code' },
-            { tag: 'AIKYAM 2026', title: 'Runner up in AIKYAM 2026 RVITM', icon: 'military_tech' },
             { tag: 'COMPETITION', title: '1st Place Winner - Science Fest 2019', icon: 'military_tech' },
             { tag: 'GAT HACKATHON', title: '7th Place in GAT Hackathon 2026', icon: 'military_tech' },
             { tag: 'KSSEM HACKATHON', title: 'Placed with in top 10 in KSSEM Hackathon 2025', icon: 'military_tech' }
-
           ].map((item, idx) => (
             <div key={idx} className="bg-surface-container-highest/40 border border-outline-variant/20 p-6 rounded-xl flex items-center gap-6 flex-1 min-w-[300px]">
               <div className="bg-primary/10 p-4 rounded-full">
@@ -95,6 +94,28 @@ const AboutSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Aikyam 2026 Featured Achievement */}
+        <div className="mt-8 bg-surface-container-highest/40 border border-primary/20 rounded-xl overflow-hidden">
+          <div className="p-6 flex items-center gap-6">
+            <div className="bg-primary/10 p-4 rounded-full">
+              <span className="material-symbols-outlined text-primary text-3xl">military_tech</span>
+            </div>
+            <div>
+              <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">AIKYAM 2026</p>
+              <p className="text-lg font-bold text-on-surface">Runner up in AIKYAM 2026 RVITM</p>
+            </div>
+          </div>
+          <div className="px-5 pb-5 flex justify-center">
+            <div className="rounded-lg overflow-hidden border border-outline-variant/10 w-fit">
+              <img
+                src={aikyamRunnerUp}
+                alt="Runner up at AIKYAM 2026 RVITM"
+                className="max-h-[400px] block"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
