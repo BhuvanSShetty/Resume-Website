@@ -79,9 +79,11 @@ const AboutSection = () => {
           {[
             { tag: 'ACADEMIC', title: '100/100 in Computer Science (PUC)', icon: 'terminal' },
             { tag: 'ACADEMIC', title: '100/100 in ADA Lab & Web Developement  (RVITM)', icon: 'code' },
+            { tag: 'AIKYAM 2026', title: 'Runner up in AIKYAM 2026 RVITM', icon: 'military_tech' },
             { tag: 'COMPETITION', title: '1st Place Winner - Science Fest 2019', icon: 'military_tech' },
             { tag: 'GAT HACKATHON', title: '7th Place in GAT Hackathon 2026', icon: 'military_tech' },
             { tag: 'KSSEM HACKATHON', title: 'Placed with in top 10 in KSSEM Hackathon 2025', icon: 'military_tech' }
+
           ].map((item, idx) => (
             <div key={idx} className="bg-surface-container-highest/40 border border-outline-variant/20 p-6 rounded-xl flex items-center gap-6 flex-1 min-w-[300px]">
               <div className="bg-primary/10 p-4 rounded-full">
