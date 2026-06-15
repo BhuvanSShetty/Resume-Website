@@ -16,7 +16,7 @@ const Navbar = () => {
       {/* Center Nav Pill */}
       <div className="hidden md:flex flex-none items-center gap-8 px-8 py-3 rounded-full border border-[#bbc9d0]/10 bg-[#1b1b1b]/70 backdrop-blur-xl text-[13px] font-bold tracking-wide pointer-events-auto shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
         <a href="#home" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Home</a>
-        <a href="#tech-core" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Skills</a>
+        <a href="#skills" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Skills</a>
         <a href="#projects" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Projects</a>
         <a href="#academics" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Academics</a>
         <a href="#achievements" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Achievements</a>
