@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TechCore from './components/TechCore';
+import ExperienceSection from './components/ExperienceSection';
 import Projects from './components/Projects';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
@@ -46,6 +47,7 @@ function App() {
         <main>
           <Hero isVisible={hasEntered} />
           <TechCore />
+          <ExperienceSection />
           <Projects />
           <AboutSection />
         </main>
