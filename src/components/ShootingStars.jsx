@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { shootingStarsStyles as styles } from '../styles';
+
 
 const ShootingStars = () => {
   const [stars, setStars] = useState([]);
@@ -46,11 +48,11 @@ const ShootingStars = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-10 pointer-events-none overflow-hidden">
+    <div className={styles.container}>
       {stars.map(star => (
         <div
           key={star.id}
-          className="absolute"
+          className={styles.starAbsolute}
           style={{
             top: `${star.top}%`,
             right: `${star.right}%`,
@@ -59,12 +61,12 @@ const ShootingStars = () => {
           }}
         >
           <div
-            className="relative w-full h-[2px] bg-gradient-to-r from-white to-transparent"
+            className={styles.streak}
             style={{
               animation: `meteor-streak ${star.duration}s ease-in forwards`,
             }}
           >
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-[3px] bg-white rounded-full shadow-[0_0_20px_5px_rgba(255,255,255,1),_0_0_40px_10px_rgba(255,255,255,0.7)]"></div>
+            <div className={styles.starHead}></div>
           </div>
         </div>
       ))}
