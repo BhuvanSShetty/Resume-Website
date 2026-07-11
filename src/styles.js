@@ -283,3 +283,19 @@ export const techCoreStyles = {
   itemDot: "w-1.5 h-1.5 bg-[#bbc9d0] rounded-full opacity-50",
   itemText: "text-[15px] font-semibold text-[#c2c7cb] group-hover:text-[#bbc9d0] transition-colors"
 };
+
+export const appStyles = {
+  appContainer: "min-h-dynamic font-sans overflow-x-hidden bg-transparent text-[#e5e2e1] relative",
+  noiseOverlay: "fixed -top-[50vh] left-0 w-full h-[200vh] z-0 opacity-[0.15] pointer-events-none mix-blend-overlay",
+  spaceEffectContainer: "fixed top-0 left-0 w-full h-dynamic z-0 pointer-events-none overflow-hidden",
+  nebulaContainer: "absolute inset-0 opacity-100 mix-blend-screen",
+  upperGasCloud: "absolute top-[-20%] left-[-10%] w-[80vw] h-[50vw] min-w-[600px] rounded-[100%] bg-[radial-gradient(ellipse_at_center,_rgba(200,200,200,0.12)_0%,_transparent_70%)] blur-[80px] animate-float-1",
+  coreCloud: "absolute top-[20%] right-[-20%] w-[90vw] h-[60vw] min-w-[700px] rounded-[100%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.15)_0%,_transparent_60%)] blur-[100px] animate-float-2",
+  underglowCloud: "absolute bottom-[-20%] left-[10%] w-[100vw] h-[60vw] min-w-[800px] rounded-[100%] bg-[radial-gradient(ellipse_at_center,_rgba(150,150,150,0.1)_0%,_transparent_70%)] blur-[90px] animate-float-3",
+  navbarWrapperBase: "transition-opacity duration-1000 delay-1000",
+  navbarWrapperVisible: "opacity-100",
+  navbarWrapperHidden: "opacity-0 pointer-events-none",
+  mainWrapperBase: "transition-opacity duration-1000 relative z-10",
+  mainWrapperVisible: "opacity-100 delay-300",
+  mainWrapperHidden: "opacity-0 pointer-events-none"
+};
