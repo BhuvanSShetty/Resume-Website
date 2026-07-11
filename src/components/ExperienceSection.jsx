@@ -1,7 +1,19 @@
 import React from 'react';
 import rvLogo from '../assets/rv_logo.png';
+import progressLogo from '../assets/progress-software-vector-logo.png';
 
 const experiences = [
+  {
+    role: 'Software Developer Intern',
+    company: 'Progress ShareFile',
+    period: 'July 2026 - Present',
+    description: '',
+    logo: progressLogo,
+    bullets: [
+      'Working on the eSign and DocGen team, contributing to the development of secure electronic signature solutions and automated document generation platforms.',
+      'Collaborating with cross-functional teams to design, implement, and optimize software features.'
+    ]
+  },
   {
     role: 'Student Placement Coordinator',
     company: 'RV Institute of Technology and Management, Bengaluru',
