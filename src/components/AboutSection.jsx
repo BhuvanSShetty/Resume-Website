@@ -5,33 +5,35 @@ import rvLogo from '../assets/rv_logo.png';
 import jsLogo from '../assets/js.png';
 import scaceLogo from '../assets/Scace.png';
 import puImage from '../assets/pu.jpg';
+import { aboutStyles as styles } from '../styles';
+
 
 const AboutSection = () => {
   return (
-    <section className="py-12 md:py-16 px-8 lg:px-24 max-w-[1600px] mx-auto text-[#c2c7cb] relative z-10">
+    <section className={styles.section}>
       {/* Engineering Philosophy */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16 items-center">
-        <div className="md:col-span-8">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-bold">Engineering Philosophy</p>
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-on-surface leading-tight">
-            Reliability and <span className="text-primary-container">Performance </span> in Every Line of Code.
+      <div className={styles.philosophyGrid}>
+        <div className={styles.philosophyTextCol}>
+          <p className={styles.philosophyTag}>Engineering Philosophy</p>
+          <h2 className={styles.philosophyTitle}>
+            Reliability and <span className={styles.philosophyHighlight}>Performance </span> in Every Line of Code.
           </h2>
-          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          <p className={styles.philosophyDesc}>
             I approach software engineering with a focus on system reliability, scalability, and performance, ensuring that applications handle increasing load while maintaining low latency and clean architecture.
           </p>
         </div>
-        <div className="md:col-span-4 flex items-end">
-          <div className="w-full aspect-square bg-surface-container rounded-lg overflow-hidden relative border border-outline-variant/10 shadow-2xl">
+        <div className={styles.philosophyImgCol}>
+          <div className={styles.philosophyImgContainer}>
             <img
-              className="w-full h-full object-cover transition-all duration-700 brightness-75 hover:brightness-100"
+              className={styles.philosophyImg}
               src={pegaImage}
               alt="Structural Engineering Core"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
-            <div className="absolute bottom-4 left-4 right-4">
-              <div className="bg-background/80 backdrop-blur-md p-4 rounded-lg border border-outline-variant/20">
-                <p className="text-xs font-bold text-primary uppercase mb-1">Current Membership</p>
-                <p className="text-sm font-semibold">Pegasus Club (Web Development)</p>
+            <div className={styles.philosophyOverlay}></div>
+            <div className={styles.philosophyBadgeContainer}>
+              <div className={styles.philosophyBadge}>
+                <p className={styles.philosophyBadgeTag}>Current Membership</p>
+                <p className={styles.philosophyBadgeText}>Pegasus Club (Web Development)</p>
               </div>
             </div>
           </div>
@@ -39,103 +41,103 @@ const AboutSection = () => {
       </div>
 
       {/* Academic Foundation Stats */}
-      <div id="academics" className="mb-16 scroll-mt-32">
-        <h2 className="text-base md:text-lg uppercase tracking-[0.2em] text-[#bbc9d0] mb-12 font-black">Academic Foundation</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
+      <div id="academics" className={styles.academicsContainer}>
+        <h2 className={styles.sectionTitle}>Academic Foundation</h2>
+        <div className={styles.academicsGrid}>
+          <div className={styles.academicCard}>
             <div>
-              <img src={rvLogo} alt="RV Institutions Logo" className="h-20 w-auto max-w-[160px] bg-white rounded-xl p-1.5 mb-6 object-contain shadow-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300" />
-              <h3 className="text-2xl font-bold text-on-surface">RV Institute of Technology (RVITM)</h3>
-              <p className="text-on-surface-variant text-sm mt-2">B.E. in Computer Science & Engineering (2027)</p>
+              <img src={rvLogo} alt="RV Institutions Logo" className={styles.academicLogo} />
+              <h3 className={styles.academicTitle}>RV Institute of Technology (RVITM)</h3>
+              <p className={styles.academicSubtitle}>B.E. in Computer Science & Engineering (2027)</p>
             </div>
-            <div className="mt-8">
-              <p className="text-4xl font-extrabold text-primary">8.62 <span className="text-sm font-normal text-on-surface-variant">CGPA</span></p>
+            <div className={styles.scoreContainer}>
+              <p className={styles.scoreText}>8.62 <span className={styles.scoreLabel}>CGPA</span></p>
             </div>
           </div>
 
-          <div className="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
+          <div className={styles.academicCard}>
             <div>
-              <img src={jsLogo} alt="Jnanasudha Logo" className="h-20 w-auto max-w-[160px] bg-white rounded-xl p-2 mb-6 object-contain shadow-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300" />
-              <h3 className="text-2xl font-bold text-on-surface">Karkala Jnanasudha PU</h3>
-              <p className="text-on-surface-variant text-sm mt-2">Class of 2023</p>
-              <p className="text-on-surface-variant text-sm mt-2">PCMC</p>
+              <img src={jsLogo} alt="Jnanasudha Logo" className={styles.academicLogoAlt} />
+              <h3 className={styles.academicTitle}>Karkala Jnanasudha PU</h3>
+              <p className={styles.academicSubtitle}>Class of 2023</p>
+              <p className={styles.academicSubtitle}>PCMC</p>
             </div>
-            <div className="mt-8">
-              <p className="text-4xl font-extrabold text-primary">94.14% <span className="text-sm font-normal text-on-surface-variant">Aggregate</span></p>
+            <div className={styles.scoreContainer}>
+              <p className={styles.scoreText}>94.14% <span className={styles.scoreLabel}>Aggregate</span></p>
             </div>
           </div>
 
-          <div className="bg-surface-container p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
+          <div className={styles.academicCardAlt}>
             <div>
-              <div className="h-20 w-20 md:w-24 bg-white rounded-xl mb-6 shadow-lg overflow-hidden flex items-center justify-center relative group-hover:scale-105 transition-transform duration-300">
-                <img src={scaceLogo} alt="Silicon City Academy Logo" className="h-full w-full object-contain scale-[1.4] opacity-90 group-hover:opacity-100 transition-all duration-300" />
+              <div className={styles.academicLogoBox}>
+                <img src={scaceLogo} alt="Silicon City Academy Logo" className={styles.academicLogoBoxImg} />
               </div>
-              <h3 className="text-2xl font-bold text-on-surface">Silicon City Academy</h3>
-              <p className="text-on-surface-variant text-sm mt-2">Secondary Education (2021)</p>
+              <h3 className={styles.academicTitle}>Silicon City Academy</h3>
+              <p className={styles.academicSubtitle}>Secondary Education (2021)</p>
             </div>
-            <div className="mt-8">
-              <p className="text-4xl font-extrabold text-primary">83.2% <span className="text-sm font-normal text-on-surface-variant">Aggregate</span></p>
+            <div className={styles.scoreContainer}>
+              <p className={styles.scoreText}>83.2% <span className={styles.scoreLabel}>Aggregate</span></p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Achievements Bento Section */}
-      <div id="achievements" className="mb-16 scroll-mt-32">
-        <h2 className="text-base md:text-lg uppercase tracking-[0.2em] text-[#bbc9d0] mb-12 font-black">Key Achievements</h2>
+      <div id="achievements" className={styles.achievementsContainer}>
+        <h2 className={styles.sectionTitle}>Key Achievements</h2>
 
         {/* Top Section: Text-Only Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className={styles.textAchievementsGrid}>
           {[
             { tag: 'ACADEMIC', title: '100/100 in ADA Lab & Web Developement (RVITM)', icon: 'code' },
             { tag: 'COMPETITION', title: '1st Place Winner - Science Fest 2019', icon: 'emoji_events' },
             { tag: 'GAT HACKATHON', title: '7th Place in GAT Hackathon 2026', icon: 'military_tech' },
             { tag: 'KSSEM HACKATHON', title: 'Placed within top 10 in KSSEM Hackathon 2025', icon: 'military_tech' }
           ].map((item, idx) => (
-            <div key={idx} className="bg-surface-container-highest/40 border border-outline-variant/20 p-5 rounded-xl flex items-center gap-5 group hover:bg-surface-container-highest/60 hover:border-primary/30 transition-all">
-              <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
-                <span className="material-symbols-outlined text-primary text-2xl">{item.icon}</span>
+            <div key={idx} className={styles.textAchievementCard}>
+              <div className={styles.iconContainer}>
+                <span className={styles.icon}>{item.icon}</span>
               </div>
               <div>
-                <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">{item.tag}</p>
-                <p className="text-sm md:text-base font-bold text-on-surface leading-tight">{item.title}</p>
+                <p className={styles.achievementTag}>{item.tag}</p>
+                <p className={styles.achievementTitle}>{item.title}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom Section: Featured Image Achievements */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className={styles.imageAchievementsGrid}>
 
           {/* Aikyam 2026 Featured Achievement (Bigger, Left) */}
-          <div className="lg:col-span-2 bg-surface-container-highest/40 border border-primary/20 rounded-xl overflow-hidden flex flex-col group min-h-[350px]">
-            <div className="p-6 flex items-center gap-5">
-              <div className="bg-primary/10 p-3.5 rounded-full flex-shrink-0">
-                <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">military_tech</span>
+          <div className={styles.featAchievementLg}>
+            <div className={styles.featHeader}>
+              <div className={styles.featIconContainer}>
+                <span className={styles.featIcon}>military_tech</span>
               </div>
               <div>
-                <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">AIKYAM 2026</p>
-                <p className="text-base md:text-lg font-bold text-on-surface leading-tight">Runner up in AIKYAM 2026 RVITM</p>
+                <p className={styles.achievementTag}>AIKYAM 2026</p>
+                <p className={styles.featTitle}>Runner up in AIKYAM 2026 RVITM</p>
               </div>
             </div>
-            <div className="flex-1 w-full border-t border-primary/10 bg-black/20 flex items-center justify-center p-6">
-              <img src={aikyamRunnerUp} alt="Runner up at AIKYAM 2026 RVITM" className="max-h-[200px] md:max-h-[240px] w-auto object-contain rounded-lg shadow-2xl border border-white/5 group-hover:scale-105 transition-transform duration-700" />
+            <div className={styles.featImgContainerLg}>
+              <img src={aikyamRunnerUp} alt="Runner up at AIKYAM 2026 RVITM" className={styles.featImg} />
             </div>
           </div>
 
           {/* PU 100/100 Featured Achievement (Smaller, Right) */}
-          <div className="lg:col-span-1 bg-surface-container-highest/40 border border-outline-variant/20 rounded-xl overflow-hidden flex flex-col group min-h-[350px]">
-            <div className="p-6 flex items-center gap-5">
-              <div className="bg-primary/10 p-3.5 rounded-full flex-shrink-0">
-                <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">terminal</span>
+          <div className={styles.featAchievementSm}>
+            <div className={styles.featHeader}>
+              <div className={styles.featIconContainer}>
+                <span className={styles.featIcon}>terminal</span>
               </div>
               <div>
-                <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">ACADEMIC</p>
-                <p className="text-base md:text-lg font-bold text-on-surface leading-tight">100/100 in Computer Science (PUC 1st Year and 2nd Year)</p>
+                <p className={styles.achievementTag}>ACADEMIC</p>
+                <p className={styles.featTitle}>100/100 in Computer Science (PUC 1st Year and 2nd Year)</p>
               </div>
             </div>
-            <div className="flex-1 w-full border-t border-outline-variant/10 bg-black/20 flex items-center justify-center p-6">
-              <img src={puImage} alt="100/100 in Computer Science (PUC)" className="max-h-[200px] md:max-h-[240px] w-auto object-contain rounded-lg shadow-2xl border border-white/5 group-hover:scale-105 transition-transform duration-700" />
+            <div className={styles.featImgContainerSm}>
+              <img src={puImage} alt="100/100 in Computer Science (PUC)" className={styles.featImg} />
             </div>
           </div>
 
@@ -143,37 +145,37 @@ const AboutSection = () => {
       </div>
 
       {/* Volunteer Work */}
-      <div className="mt-16 relative bg-[#1b1b1b]/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-[#bbc9d0]/10 overflow-hidden shadow-2xl group transition-all hover:bg-[#1b1b1b]/60 hover:border-[#bbc9d0]/20">
+      <div className={styles.volunteerSection}>
 
         {/* Subtle Background Glow */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.05)_0%,_transparent_70%)] rounded-full blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.1)_0%,_transparent_70%)]"></div>
+        <div className={styles.volunteerGlow}></div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 relative z-10">
-          <div className="max-w-xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-4 py-1.5 rounded-full border border-[#bbc9d0]/20 bg-transparent text-[#bbc9d0] text-[10px] font-bold tracking-[0.2em] uppercase">
+        <div className={styles.volunteerContent}>
+          <div className={styles.volunteerLeft}>
+            <div className={styles.volunteerTagContainer}>
+              <span className={styles.volunteerTag}>
                 Social Impact
               </span>
-              <div className="h-[1px] w-12 bg-[#bbc9d0]/20"></div>
+              <div className={styles.volunteerTagLine}></div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#f8f9fa] tracking-tight mb-6 leading-tight">
-              Empowering via <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#bbc9d0] to-[#5f6c73]">U&I</span>
+            <h2 className={styles.volunteerTitle}>
+              Empowering via <span className={styles.volunteerTitleHighlight}>U&I</span>
             </h2>
 
-            <p className="text-[#c2c7cb] text-lg leading-relaxed font-medium">
+            <p className={styles.volunteerDesc}>
               Applying principles of structure and growth to community impact as a Teaching Volunteer, mentoring students to reach their full potential.
             </p>
           </div>
 
-          <div className="flex flex-row items-center gap-6 md:gap-8 pl-0 lg:pl-12 lg:border-l-2 border-[#bbc9d0]/10">
-            <div className="text-left lg:text-center">
-              <p className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#f8f9fa] to-[#5f6c73]">Volunteer</p>
-              <p className="text-[#c2c7cb] text-[11px] uppercase tracking-[0.2em] mt-3 font-semibold">Teaching & Mentorship</p>
+          <div className={styles.volunteerRight}>
+            <div className={styles.volunteerStatsText}>
+              <p className={styles.volunteerStatsNumber}>Volunteer</p>
+              <p className={styles.volunteerStatsLabel}>Teaching & Mentorship</p>
             </div>
 
-            <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-full border border-[#bbc9d0]/20 bg-[#131313]/50 shadow-[0_0_20px_rgba(187,201,208,0.05)]">
-              <span className="material-symbols-outlined text-3xl text-[#bbc9d0]" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
+            <div className={styles.volunteerIconBox}>
+              <span className={styles.volunteerIcon} style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
             </div>
           </div>
         </div>

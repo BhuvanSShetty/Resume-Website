@@ -1,32 +1,33 @@
 import React from 'react';
+import { footerStyles as styles } from '../styles';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="w-full pt-16 pb-10 px-6 md:px-12 bg-[#1b1b1b]/40 backdrop-blur-xl border-t border-[#bbc9d0]/10 mt-20">
-      <div className="max-w-[1440px] mx-auto">
+    <footer id="contact" className={styles.footer}>
+      <div className={styles.container}>
         
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+        <div className={styles.mainRow}>
           
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="text-[#e5e2e1] font-bold text-xl tracking-tight">Bhuvan S Shetty</span>
-            <span className="text-[#bbc9d0]/60 text-sm font-medium">Software Engineer</span>
+          <div className={styles.brandCol}>
+            <span className={styles.brandName}>Bhuvan S Shetty</span>
+            <span className={styles.brandRole}>Software Engineer</span>
           </div>
 
-          <div className="flex flex-wrap justify-center md:justify-end gap-x-12 gap-y-4">
-            <a href="https://github.com/BhuvanSShetty" target="_blank" rel="noopener noreferrer" className="text-[#c2c7cb] hover:text-white transition-colors text-sm font-bold tracking-wide">
+          <div className={styles.linksCol}>
+            <a href="https://github.com/BhuvanSShetty" target="_blank" rel="noopener noreferrer" className={styles.link}>
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/bhuvansshetty/" target="_blank" rel="noopener noreferrer" className="text-[#c2c7cb] hover:text-white transition-colors text-sm font-bold tracking-wide">
+            <a href="https://www.linkedin.com/in/bhuvansshetty/" target="_blank" rel="noopener noreferrer" className={styles.link}>
               LinkedIn
             </a>
-            <a href="mailto:bhuvansshetty90@gmail.com" className="text-[#c2c7cb] hover:text-white transition-colors text-sm font-bold tracking-wide">
+            <a href="mailto:bhuvansshetty90@gmail.com" className={styles.link}>
               Email
             </a>
           </div>
           
         </div>
         
-        <div className="mt-12 flex justify-center items-center text-[#bbc9d0]/40 text-xs gap-4">
+        <div className={styles.copyright}>
           <p>© 2026 Bhuvan S Shetty. All rights reserved.</p>
         </div>
       </div>

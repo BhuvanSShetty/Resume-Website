@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import musicFile from '../assets/music.mp3';
+import { audioPlayerStyles as styles } from '../styles';
 
 const AudioPlayer = ({ isVisible = true }) => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -86,17 +87,17 @@ const AudioPlayer = ({ isVisible = true }) => {
   }, []);
 
   return (
-    <div className={`transition-opacity duration-1000 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`${styles.containerBase} ${isVisible ? styles.containerVisible : styles.containerHidden}`}>
       <div 
         ref={containerRef}
-        className="fixed bottom-6 right-6 z-50 flex items-center bg-primary/10 hover:bg-primary/20 backdrop-blur-md border border-primary/20 rounded-full p-1.5 transition-all duration-300 shadow-lg shadow-primary/5 hover:scale-105 group"
+        className={styles.playerWrapper}
         onMouseEnter={() => setShowSlider(true)}
         onMouseLeave={() => setShowSlider(false)}
         onClick={() => setShowSlider(true)}
       >
         
         {/* Volume Slider - Expands on hover (desktop), hidden on mobile */}
-        <div className={`hidden md:flex overflow-hidden transition-all duration-500 ease-in-out items-center justify-center ${showSlider ? 'w-28 opacity-100' : 'w-0 opacity-0'}`}>
+        <div className={`${styles.sliderContainerBase} ${showSlider ? styles.sliderContainerVisible : styles.sliderContainerHidden}`}>
           <input 
             type="range" 
             min="0" 
@@ -104,7 +105,7 @@ const AudioPlayer = ({ isVisible = true }) => {
             step="0.01" 
             value={volume}
             onChange={handleVolumeChange}
-            className="w-20 mx-2 h-1 bg-primary/30 rounded-lg appearance-none cursor-pointer accent-primary"
+            className={styles.sliderInput}
             title="Adjust Volume"
           />
         </div>
@@ -115,18 +116,18 @@ const AudioPlayer = ({ isVisible = true }) => {
             e.stopPropagation(); // prevent triggering the container onClick again
             toggleMusic();
           }}
-          className="p-3 rounded-full text-primary flex items-center justify-center transition-transform"
+          className={styles.button}
           aria-label="Toggle Background Music"
           title={isPlaying ? "Pause Music" : "Play Music"}
         >
           {isPlaying ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.iconPlaying}>
               <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
               <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
               <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.iconPaused}>
               <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
               <line x1="23" y1="9" x2="17" y2="15"></line>
               <line x1="17" y1="9" x2="23" y2="15"></line>
